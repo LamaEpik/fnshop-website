@@ -20,8 +20,8 @@ const specialSections = createSpecialSection([
 ])
 
 const shopTabs = [
-  { sectionName: "Featured", sectionEntries: featured },
-  { sectionName: "Daily", sectionEntries: daily },
+  { sectionName: props.shop.featured.name, sectionEntries: featured },
+  { sectionName: props.shop.daily.name, sectionEntries: daily },
   ...specialSections,
 ]
 

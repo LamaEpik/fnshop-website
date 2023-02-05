@@ -1,6 +1,10 @@
 @import "./styles/vbucks.scss";
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+@font-face {
+  font-family: "Burbank";
+  src: url("./styles/BurbankBigCondensed-Black.otf") format("opentype");
+}
+
 
 @property --darker-color {
   syntax: "<color>";
@@ -34,11 +38,13 @@
 body {
   min-height: 100vh;
 
-  font-family: "Roboto Condensed";
+  font-family: "Burbank", sans-serif;
   font-size: 16px;
   color: #111827;
 
-  background-color: #e5e7eb;
+  background-image: url('./styles/fond.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .shop {
@@ -81,7 +87,7 @@ body {
 
       gap: 1rem;
 
-      &.bundle[data-children="1"] {
+      &.bundle[data-children="2"] {
         grid-template-columns: repeat(2, 1fr);
       }
 

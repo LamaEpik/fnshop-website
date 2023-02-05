@@ -6,13 +6,53 @@
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fortnite Item Shop</title>
+    <title>Fortnite Item Shop of the day - FNShop</title>
 
     <link rel="modulepreload" href="/src/main.tsx">
-    <link rel="stylesheet" href="/src/index.scss">
+    <link rel="stylesheet" href="/src/main.scss">
   </head>
   <body>
+    <header style="text-align: center; padding: 1em 0;">
+      <img src="/src/styles/logo.png" alt="FNShop logo">
+    </header>
     <main class="shop"></main>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        Notification.requestPermission().then(permission => {
+          if (permission === 'granted') {
+            const options = {
+              body: 'The new Fortnite Item Shop of the day is available on our website!',
+            };
+            
+            const now = new Date();
+            const utcMidnight = new Date(
+              Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1)
+            );
+            const timeUntilMidnight = utcMidnight - now;
+
+            setTimeout(() => {
+              new Notification('FNShop', options);
+            }, timeUntilMidnight);
+          }
+        });
+      });
+    </script>
+    <script>
+      var script = document.createElement('script'); 
+      script.dataset.cache = true; 
+      script.dataset.websiteId = 'b3444965-8e7c-42f3-bb60-632ad5ffa062'; 
+      script.src='https://s.abla.io/abla.js'; 
+      document.getElementsByTagName('head')[0].appendChild(script);
+    </script>
+    <footer style="background-color: white; padding: 1em;">
+      <div style="display: flex; justify-content: space-between;">
+        <span style="font-size: larger;">2023 © FNShop</span>
+        <a href="https://github.com/lamaepik/fnshop-website/releases/latest" style="font-size: larger;">BETA 1.0.0 Version</a>
+        <a href="/privacy" style="font-size: larger;">Privacy Policy</a>
+      </div>
+      <div style="margin-top: 1em;">We are not affiliated with Epic Games, our content is not official or endorsed by Epic Games in any way.</div>
+    </footer>
   </body>
 </html>
