@@ -2,7 +2,9 @@
   from = "/*"
   to = "/index.html"
   status = 200
-  
+
+[[redirects]]
   from = "/privacy.html"
   to = "/privacy"
-  status = 301
+  status = 200
+  force = true
