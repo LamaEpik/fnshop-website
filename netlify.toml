@@ -5,4 +5,4 @@
   
   from = "/privacy.html"
   to = "/privacy"
-  status = 301!
+  status = 301
