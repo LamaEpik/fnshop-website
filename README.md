@@ -1,2 +1,7 @@
-# FNShopFR Website
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4a66afcc-5d32-446f-9d88-71960e3b766e/deploy-status)](https://app.netlify.com/sites/fnshopfr/deploys)
+# FNShop Website
+![Vercel](https://vercelbadge.vercel.app/api/flopinou/fortnite-item-shop-website)
+
+A modification of Macarie's project with some additions like changing the language of the shop compared to the language of the browser or the font of the site. 
+A fortnite item shop website with daily update write with vue.js and fortnite-api.com API.
+
+I will probably not continue this project, so you can fork if you want without worries!
